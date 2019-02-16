@@ -1,25 +1,32 @@
 {
   "name": "c-help",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
-  "dependencies": {
-    "react": "^16.8.2",
-    "react-dom": "^16.8.2",
-    "react-scripts": "2.1.5"
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,css,scss}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev:client": "yarn --cwd ./client dev",
+    "dev:server": "yarn --cwd ./server dev",
+    "dev": "concurrently --kill-others \"yarn dev:client\" \"yarn dev:server\""
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "devDependencies": {
+    "concurrently": "^4.0.1",
+    "husky": "^1.0.1",
+    "lint-staged": "^7.3.0",
+    "prettier": "^1.16.3",
+    "prettier-eslint": "^8.8.2"
+  }
 }
