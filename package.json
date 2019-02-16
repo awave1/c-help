@@ -18,9 +18,11 @@
     ]
   },
   "scripts": {
-    "dev:client": "yarn --cwd ./client start",
-    "dev:server": "yarn --cwd ./server dev",
-    "dev": "concurrently --kill-others \"yarn dev:client\" \"yarn dev:server\""
+    "build": "concurrently --kill-others \"npm run build:client\"",
+    "build:client": "npm run build --prefix ./client",
+    "dev": "concurrently --kill-others \"npm run dev:client\" \"npm run dev:server\"",
+    "dev:client": "npm start --prefix ./client",
+    "dev:server": "npm start --prefix ./server"
   },
   "devDependencies": {
     "concurrently": "^4.0.1",
