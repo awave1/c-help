@@ -21,7 +21,11 @@ class DateTime extends React.Component {
   }
 
   render() {
-    return <span>{this.state.date.toLocaleTimeString()}</span>;
+    return (
+      <span>
+        {this.state.date.toDateString()}, {this.state.date.toLocaleTimeString()}
+      </span>
+    );
   }
 }
 
