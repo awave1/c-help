@@ -18,6 +18,7 @@
     ]
   },
   "scripts": {
+    "postinstall": "cd client && yarn install && cd ../server && yarn install",
     "build": "concurrently --kill-others \"npm run build:client\"",
     "build:client": "npm run build --prefix ./client",
     "dev": "concurrently --kill-others \"npm run dev:client\" \"npm run dev:server\"",
