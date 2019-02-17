@@ -10,6 +10,9 @@ router.post('/hook', async ctx => {
   ctx.body = {
     currentTemp: weather.main.temp,
     descriptionWeather: weather.weather.map(o => o.description).join(', '),
+    fulFillmentText: ' ',
+    fulFillmentMessage: [{ text: { text: weather.main.temp } }],
+    status: ' ',
   };
 });
 
