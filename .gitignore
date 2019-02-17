@@ -23,3 +23,6 @@ yarn-error.log*
 package-lock.json
 
 .vscode
+.vs/c-help/v15/.suo
+.vs/slnx.sqlite
+.vs/VSWorkspaceState.json
