@@ -3,8 +3,6 @@ const path = require('path');
 
 require('dotenv').config(path.resolve(__dirname, '../.env'));
 
-console.log(process.env);
-
 const LANGUAGE_CODE = 'en-US';
 
 class DialogflowController {
