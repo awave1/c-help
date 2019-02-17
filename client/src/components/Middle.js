@@ -1,15 +1,29 @@
 import React, { Component } from 'react';
 
-class Middle extends Component {
+class Middle extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { date: new Date() };
+  }
+
+  componentDidMount() {
+    this.timerID = setInterval(() => this.tick(), 1000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timerID);
+  }
+
+  tick() {
+    this.setState({
+      date: new Date(),
+    });
+  }
+
   render() {
     return (
-      <div className="middle">
-        <div className="time">
-          <h1>TIME and DATE</h1>
-        </div>
-        <div className="Weather">
-          <h1>It cold</h1>
-        </div>
+      <div>
+        <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
       </div>
     );
   }
