@@ -4,13 +4,20 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon ./src/server.js",
+    "start": "node ./src/server.js",
     "dev": "nodemon ./src/server.js"
   },
   "dependencies": {
+    "dialogflow": "^0.8.0",
+    "dotenv": "^6.2.0",
     "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-json-error": "^3.1.2",
     "koa-router": "^7.4.0",
-    "koa-static": "^5.0.0"
+    "koa-static": "^5.0.0",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.7",
+    "uuid": "^3.3.2"
   },
   "devDependencies": {
     "nodemon": "^1.18.10"
