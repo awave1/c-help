@@ -1,5 +1,6 @@
 const Koa = require('koa');
 const serve = require('koa-static');
+var bodyParser = require('koa-bodyparser');
 const path = require('path');
 const router = require('./routes/root');
 
@@ -11,6 +12,7 @@ if (process.env.NODE_ENV === 'production') {
   app.use(serve(publicPath));
 }
 
+app.use(bodyParser());
 app.use(router.routes()).use(router.allowedMethods());
 
 module.exports = app;
