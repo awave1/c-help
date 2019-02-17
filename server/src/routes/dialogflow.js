@@ -15,9 +15,15 @@ router.get('/', async ctx => {
     sessionId
   );
 
+  const fulfillmentText = dialogflowResp[0].queryResult.fulfillmentText;
+  const fulfillmentMessages = dialogflowResp[0].queryResult.fulfillmentMessages;
+
   ctx.body = {
-    weather: dialogflowResp[0].queryResult.fulfillmentText,
+    weather: fulfillmentText,
+    forecast: fulfillmentMessages.map(f => f.payload.fields),
   };
 });
+
+router.get('/weekForecast', async ctx => {});
 
 module.exports = router;
