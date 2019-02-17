@@ -1,33 +1,22 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
+import DateTime from './DateTime';
 import Weather from './Weather';
 
+const MainDisplay = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin: auto;
+`;
+
 class Middle extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { date: new Date() };
-  }
-
-  componentDidMount() {
-    this.timerID = setInterval(() => this.tick(), 1000);
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.timerID);
-  }
-
-  tick() {
-    this.setState({
-      date: new Date(),
-    });
-  }
-
   render() {
     return (
-      <div>
-        <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
-        <Weather> </Weather>
-        <h1>FUEGOOOOOOOOOOOOOOOOOOOOO</h1>
-      </div>
+      <MainDisplay>
+        <DateTime />
+        <Weather />
+      </MainDisplay>
     );
   }
 }

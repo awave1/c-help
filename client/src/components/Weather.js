@@ -12,12 +12,12 @@ class Weather extends Component {
   }
 
   async getWeather(requestText) {
-    const resp = await axios.get(
-      `/api/v1/dialogflow?requestText=${requestText}`
-    );
+    const {
+      data: { weather },
+    } = await axios.get(`/api/v1/dialogflow?requestText=${requestText}`);
 
     this.setState({
-      weather: resp,
+      weather,
     });
   }
 

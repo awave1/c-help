@@ -1,27 +1,28 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 import Button from '@material-ui/core/Button';
-import { Column, Row } from 'simple-flexbox';
+import { Row } from 'simple-flexbox';
+
+const HeaderContainer = styled.div`
+  display: flex;
+  align-self: center;
+  height: 20%;
+`;
 
 class Header extends Component {
   render() {
     return (
-      <div className="headerRow">
-        <Row horizontal="center">
-          <Button variant="contained" color="secondary" style={styles}>
-            SOS
-          </Button>
-        </Row>
-      </div>
+      <HeaderContainer>
+        <Button
+          variant="contained"
+          color="secondary"
+          style={{ margin: 'auto' }}
+        >
+          SOS
+        </Button>
+      </HeaderContainer>
     );
   }
 }
 
-const styles = {
-  marginTop: 25,
-  maxWidth: '27%',
-  maxHeight: '50%',
-  minWidth: '27%',
-  minHeight: '50%',
-  fontSize: 30,
-};
 export default Header;

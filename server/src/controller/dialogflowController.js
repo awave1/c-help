@@ -38,7 +38,6 @@ class DialogflowController {
     };
     try {
       let responses = await this.sessionClient.detectIntent(request);
-      console.log('DialogFlow.sendTextMessageToDialogFlow: Detected intent');
       return responses;
     } catch (err) {
       console.error('DialogFlow.sendTextMessageToDialogFlow ERROR:', err);

@@ -14,10 +14,10 @@ router.get('/', async ctx => {
     ctx.query.requestText,
     sessionId
   );
+
   ctx.body = {
-    weatherStr: ctx.response[0].queryResult.fulfillmentText,
+    weather: dialogflowResp[0].queryResult.fulfillmentText,
   };
-  console.log(dialogflowResp);
 });
 
 module.exports = router;
