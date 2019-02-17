@@ -9,6 +9,7 @@ router.post('/hook', async ctx => {
   console.log('hook', weather);
   ctx.body = {
     currentTemp: weather.main.temp,
+    descriptionWeather: weather.weather.map(o => o.description).join(', '),
   };
 });
 
