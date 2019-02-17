@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Weather from './Weather';
 
 class Middle extends Component {
   constructor(props) {
@@ -24,7 +25,7 @@ class Middle extends Component {
     return (
       <div>
         <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
-        <h2>Put the weather here pls</h2>
+        <Weather> </Weather>
         <h1>FUEGOOOOOOOOOOOOOOOOOOOOO</h1>
       </div>
     );
