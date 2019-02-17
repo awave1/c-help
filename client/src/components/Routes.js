@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import MapPage from './pages/MapPage';
 import WeatherPage from './pages/WeatherPage';
+import AskPage from './pages/AskPage';
 
 class AppRouter extends React.Component {
   render() {
@@ -11,7 +12,7 @@ class AppRouter extends React.Component {
         <Route exact path="/" component={HomePage} />
         <Route path="/map" component={MapPage} />
         <Route path="/weather" component={WeatherPage} />
-        <Route path="/ask" />
+        <Route path="/ask" component={AskPage} />
         <Route path="/emergency" />
       </Switch>
     );
