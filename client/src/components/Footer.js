@@ -5,6 +5,7 @@ class Footer extends Component {
   render() {
     return (
       <div className="footer">
+        display: flex;
         <div className="column1">
           <Button variant="contained" color="primary" size="large">
             Weather
