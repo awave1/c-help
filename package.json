@@ -24,7 +24,8 @@
     "dev:client": "npm start --prefix ./client",
     "dev:server": "npm run dev --prefix ./server",
     "prod": "export NODE_ENV=production && yarn build:client && yarn prod:server",
-    "prod:server": "npm start --prefix ./server"
+    "prod:server": "npm start --prefix ./server",
+    "heroku-postbuild": "echo Skip build on Heroku"
   },
   "devDependencies": {
     "concurrently": "^4.0.1",
@@ -36,5 +37,6 @@
   },
   "dependencies": {
     "dotenv": "^6.2.0"
-  }
+  },
+  "heroku-run-build-script": true
 }
