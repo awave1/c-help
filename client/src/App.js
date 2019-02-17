@@ -7,6 +7,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <style>{'body { background-color: lightblue; }'}</style>
         <Header />
         <Middle />
         <Footer />
