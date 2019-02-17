@@ -24,6 +24,7 @@ class Middle extends React.Component {
     return (
       <div>
         <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+        <h2>Put the weather here pls</h2>
       </div>
     );
   }
