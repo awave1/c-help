@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Button from '@material-ui/core/Button';
-import { Row } from 'simple-flexbox';
 
 const HeaderContainer = styled.div`
   display: flex;

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import DateTime from './DateTime';
-import Weather from './Weather';
+import Routes from './Routes';
 
 const MainDisplay = styled.div`
   display: flex;
@@ -14,8 +13,7 @@ class Middle extends Component {
   render() {
     return (
       <MainDisplay>
-        <DateTime />
-        <Weather />
+        <Routes />
       </MainDisplay>
     );
   }
