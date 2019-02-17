@@ -1,6 +1,6 @@
 import React from 'react';
-import DateTime from './DateTime';
-import Weather from './Weather';
+import DateTime from '../DateTime';
+import Weather from '../Weather';
 
 class Home extends React.Component {
   render() {
